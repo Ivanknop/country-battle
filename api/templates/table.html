@@ -1,0 +1,24 @@
+{% include 'header.html' %}
+
+<h1 class="h1">TABLA DE PAÍSES</h1>
+   
+    <table class="table bg-info">
+        <thead cellpadding="1.0" cellspacing="1.0">
+            <tr>
+                <th>Nombre</th>         
+                <th>Vitalidad</th>
+            </tr>
+            {% for row in data %}
+            <tr>
+                <td>{{row.get_name()}}</td>
+                <td>{{row.get_vitality()}}</td>
+                
+            </tr>
+            {% endfor %}
+        </thead>
+    </table>
+
+    
+
+
+{% include 'footer.html' %}

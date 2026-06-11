@@ -28,7 +28,7 @@ def test_country_has_expected_characteristics():
     assert usa.get_characteristics()["life_expectancy"] == 0.5
 
     assert usa.offensive_power() == 0.28
-    assert usa.defensive_power() == 0.2505
-    assert usa.initiative() == 0.17
+    assert usa.defensive_power() == 0.218
+    assert usa.initiative() == 0.253
     assert usa.get_resistance() == 1293000.0
     

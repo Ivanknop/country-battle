@@ -1,0 +1,30 @@
+{% include 'header.html' %}
+
+    <H1 class="h1">ELIJA A SU PAÍS Y PREPARESE PARA LA GUERRA</H1>
+    <div class="local-form">
+    <form action="{{ url_for('start_fight') }}" method="get">
+    <table class="table bg-info">
+        <tr>
+            <th>
+                <h2 class="h2-country">PAIS PRINCIPAL</h2>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <label for="jugador">Elegí tu País</label>
+                <select name="jugador" id="jugador">
+                    {% for country in country_db %}
+                        <option value="{{ country.get_name() }}">
+                            {{ country.get_name() }}
+                        </option>
+                    {% endfor %}
+                </select>
+                <button type="submit" class="button-chose-country">
+                    Elegir País
+                </button>
+            </td>
+        </tr>
+    </table>
+    </form>
+</div>
+{% include 'footer.html' %}

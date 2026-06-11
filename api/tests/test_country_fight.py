@@ -35,9 +35,9 @@ def test_fighter():
     print(f"ARG offensive_power: {arg.offensive_power()}")
     print(f"USA defensive_power: {usa.defensive_power()}")
     print(f"USA vitality: {usa.get_vitality()}")
-    events = round.play_turn(player_luck=0, opponent_luck=0)
+    events = round.play_turn(attacker_luck=0, defender_luck=0)
     assert len(events) == 2
     assert usa.is_alive() is True
-    round.play_turn(player_luck=0, opponent_luck=0)
-    round.play_turn(player_luck=0, opponent_luck=0)
+    round.play_turn(attacker_luck=0, defender_luck=0)
+    round.play_turn(attacker_luck=0, defender_luck=0)
     assert round.winner().get_name() == "ARG"
