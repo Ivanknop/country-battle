@@ -29,6 +29,3 @@ class Country(Entity):
     def initiative(self):
         base_initiative = self.characteristics["military_expenditure"] * 0.4 + self.characteristics["gdp_per_capita"] * 0.3 + self.characteristics["human_capital_index"] * 0.2 + self.characteristics["health_expenditure"] * 0.1
         return base_initiative * self._vitality_modifier()  
-    
-    def get_resistance(self):
-        return self.get_vitality()
